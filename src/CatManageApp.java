@@ -1,11 +1,17 @@
 import java.util.Scanner;
 
 public class CatManageApp {
+    //array of saving cats
     private static Cat[] cats = new Cat[100];
+    //maintain the current maximum index
     private static int maxIndex = -1;
     static void main(String[] args) {
         System.out.println("Welcome to use simple cat manage system");
         Scanner sc = new Scanner(System.in);
+        //"Scanner": a input scanning class provided by java
+        //"sc":parameter name
+        //"new":crate an object
+        //"Systen.in":represent for input
        int select = 0;
         while (true) {
             System.out.println("--------------------------------------------------------");
@@ -101,12 +107,19 @@ public class CatManageApp {
         cats[index].setDescription(description);
         System.out.println("Modify successfully!");
     }
+
+    //query cats
     private static void query() {
         System.out.println("----------------Query cats--------------");
         System.out.println("-------1name  2age  3breeds--------");
+        //basis for queries
         Scanner sc = new Scanner(System.in);
         int select = sc.nextInt();
+        //int select:variable declaration
+        //sc:object variable
+        //nextInt:method name
         if (select == 1) {
+            //query base on name
             System.out.println("Please enter cats' name:");
             String name = sc.next();
             for (int i = 0; i <= maxIndex; i++) {
@@ -140,33 +153,50 @@ public class CatManageApp {
 
 
     }
+    //print all the cats
         private static void printAll () {
             System.out.println("--------All information of cats--------");
-            for (int i = 0; i <= maxIndex; i++) {
+            for (int i = 0; i <= maxIndex; i++) { //use for loop to print all cats
+                //maxIndex means the max number of the cats' index
                 if (cats[i] != null && cats[i].getState() == 1) {
+                    //this "if" is to judge whether the cat is deleted or not.
+                    //We only need to print the one is not deleted.
+                    //"getState"is a method included in "product",which
+                    //is used to return product status value
                     System.out.println(cats[i]);
                 }
             }
         }
+
+        //automatically generate numbers
         public static int createNo () {
             if (maxIndex == 0){
                 return 1;
             } else {
+                //last cat's index add 1
                 return cats[maxIndex-1].getId() +1;
             }
         }
+
+        //search index based on cat's number
         public static int findIndex (int id){
-            int index = -1;
-            for (int i = 0; i <= maxIndex; i++) {
-                if (id == cats[i].getId()) {
-                    index = i;
-                    break;
+            int index = -1;//if we don't find the relative index
+            //if statement won't conduct,return index whose value is -1
+            //search a number in its array
+            for (int i = 0; i <= maxIndex; i++) { //search through all the cats
+                //in the array
+                if (id == cats[i].getId()) { //find the cat which has the index
+                    index = i; //assign the value of i to the index
+                    break;//find the index and then stop the loop
                 }
             }
             return index;
         }
+
+        //print cats under the specified index
         public static void printCat ( int index){
             System.out.println(cats[index]);
+            //simplify the print operation by using "toString" method above
         }
 
 
