@@ -8,6 +8,8 @@ public class Cat {
     private int state;
     public Cat(int id, String name,int age, String breeds,int price, String description, int state){
         this.id = id;
+        //this:differ this.name from name
+        //name is a parameter name but this.name is the object's attribute
         this.name = name;
         this.age = age;
         this.breeds = breeds;
@@ -24,10 +26,12 @@ public class Cat {
     }
 
     public String getName() {
+        //get name
         return name;
     }
 
     public void setName(String name) {
+        //modify cat's name
         this.name = name;
     }
 

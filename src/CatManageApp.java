@@ -106,9 +106,12 @@ public class CatManageApp {
         int answer = sc.nextInt();
         if (answer == 1){
             cats[index].setState(0);
+            //change cat's state into 0 to delete it
             System.out.println("Delete successfully!");
         }
     }
+
+    //modify a cat
     private static void modify() {
         System.out.println("----------------Modify cats--------------");
         System.out.println("Please enter the cat ID you want to modify:");
