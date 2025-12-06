@@ -3,9 +3,14 @@ import java.util.Scanner;
 public class CatManageApp {
     //array of saving cats
     private static Cat[] cats = new Cat[100];
+    //private:method can only be accessed in the current class
+    //static:it is static method.It can be called directly by the class name without
+    //creating an instance object.
     //maintain the current maximum index
     private static int maxIndex = -1;
+    //maxIndex:the largest number of the index
     static void main(String[] args) {
+        //void:do not need to return any value
         System.out.println("Welcome to use simple cat manage system");
         Scanner sc = new Scanner(System.in);
         //"Scanner": a input scanning class provided by java
@@ -14,10 +19,22 @@ public class CatManageApp {
         //"Systen.in":represent for input
        int select = 0;
         while (true) {
-            System.out.println("--------------------------------------------------------");
-            System.out.println("------1Save  2Delete  3Modify  4Query  5PrintAll--------");
-            System.out.println("--------------------------------------------------------");
-            System.out.println("Please enter the business you want to select");
+            System.out.println("---------------00------------------------00-----------------------");
+            System.out.println("-------------00--00--------------------00--00---------------------");
+            System.out.println("------------00----00---000000000000---00----00--------------------");
+            System.out.println("-----------00---------000--------000----------00------------------");
+            System.out.println("---------00------------------------------------00-----------------");
+            System.out.println("-------000--------------------------------------000---------------");
+            System.out.println("-------000--------------------------------------000---------------");
+            System.out.println("------1Save  2Delete  3Modify  4Query  5PrintAll--00--------------");
+            System.out.println("-------000---------------------------------------00---------------");
+            System.out.println("-------000-----------------00000000-------------000---------------");
+            System.out.println("--------000-----------------000000-------------000----------------");
+            System.out.println("---------000------------------00--------------000-----------------");
+            System.out.println("-----------000-------------------------------000------------------");
+            System.out.println("--------------000--------------------------000--------------------");
+            System.out.println("------------------000000000000000000000000------------------------");
+            System.out.println("-------Please enter the business you want to select---------------");
             select = sc.nextInt();
             switch (select) {
                 case 1:
@@ -42,15 +59,21 @@ public class CatManageApp {
 
     }
 
+    // add cats
+    //use can in put and save the information of cats one by one
     private static void save() {
         System.out.println("---------------Save cats--------------");
-        maxIndex ++;
+        maxIndex ++;//the max index add 1
         Scanner sc = new Scanner(System.in);
         int id = createNo();
+        //createNo:generate number
         System.out.println("Name");
         String name = sc.next();
+        //next():a method included in scanner,used to read the next string
         System.out.println("Age");
         int age = sc.nextInt();
+        //nextInt():a method included in scanner,used to read the next integer
+        //next() and nextInt()is different
         System.out.println("Breeds");
         String breeds = sc.next();
         System.out.println("Price");
@@ -58,8 +81,16 @@ public class CatManageApp {
         System.out.println("Description");
         String description = sc.next();
         Cat a = new Cat(id,name,age,breeds,price,description,1);
+        //combine the object
+        //Cat:variable declaration
         cats[maxIndex] = a;
+        //save information into array
+        //a is a place where we store the information temporarily
+        System.out.println("Add a cat succesfully!");
+        System.out.println("This cat's ID is " + maxIndex+".");
     }
+
+    //delete a cat
     private static void delete() {
         System.out.println("---------------Delete cats--------------");
         System.out.println("Please enter the cat ID you want to delete:");
@@ -124,11 +155,17 @@ public class CatManageApp {
             String name = sc.next();
             for (int i = 0; i <= maxIndex; i++) {
                 if (cats[i].getName().contains(name) && cats[i].getState() == 1) {
+                   //cat[i]:the cat with index i
+                    //get.name:get cat name by using get.name method
+                    //contains(name):check whether cat's name contain name string
+                    //get.State:get the cats' status
+                    //==1:make sure it is not deleted
                     System.out.println(cats[i]);
                 }
             }
 
         } else if (select == 2) {
+            //query based on age
             System.out.println("Please enter cats' age:");
             int age = sc.nextInt();
             for (int i = 0; i <= maxIndex; i++) {
@@ -138,6 +175,7 @@ public class CatManageApp {
                 }
             }
         } else if (select == 3) {
+            //query base on breeds
             System.out.println("Please enter cats' breeds: ");
             String breeds = sc.next();
             for (int i = 0; i <= maxIndex; i++) {
