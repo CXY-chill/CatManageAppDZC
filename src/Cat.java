@@ -9,7 +9,7 @@ public class Cat {
     public Cat(int id, String name,int age, String breeds,int price, String description, int state){
         this.id = id;
         //this:differ this.name from name
-        //name is a parameter name but this.name is the object's attribute
+        //"name" is a parameter name but "this.name" is the object's attribute
         this.name = name;
         this.age = age;
         this.breeds = breeds;

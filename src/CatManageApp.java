@@ -60,7 +60,7 @@ public class CatManageApp {
     }
 
     // add cats
-    //use can in put and save the information of cats one by one
+    //user can in put and save the information of cats one by one
     private static void save() {
         System.out.println("---------------Save cats--------------");
         maxIndex ++;//the max index add 1
