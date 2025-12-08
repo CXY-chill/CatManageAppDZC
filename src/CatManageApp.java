@@ -218,6 +218,26 @@ public class CatManageApp {
         int deletedCats = 0;
         int totalValue = 0;
 
+        for (int i = 0; i <= maxIndex; i++) {
+            if (cats[i] != null) {
+                totalCats++;
+                if (cats[i].getState() == 1) {
+                    activeCats++;
+                    totalValue += cats[i].getPrice();
+                } else {
+                    deletedCats++;
+                }
+            }
+        }
+
+        System.out.println("The total number of cats is: " + totalCats);
+        System.out.println("The number of active cats is: " + activeCats);
+        System.out.println("The number of deleted cats is: " + deletedCats);
+        System.out.println("The total value of all cats is: " + totalValue);
+        if (activeCats > 0) {
+            System.out.println("The average value of each active cat is: " + (totalValue / activeCats));
+        }
+    }
         //automatically generate numbers
         public static int createNo () {
             if (maxIndex == 0){
