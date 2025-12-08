@@ -90,6 +90,10 @@ public class CatManageApp {
         String breeds = sc.next();
         System.out.println("Price");
         int price = sc.nextInt();
+        while (price < 0) {
+            System.out.println("Price cannot be negative, please enter again:");
+            price = sc.nextInt();
+        }
         System.out.println("Description");
         String description = sc.next();
         Cat a = new Cat(id,name,age,breeds,price,description,1);
