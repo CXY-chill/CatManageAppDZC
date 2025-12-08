@@ -75,6 +75,10 @@ public class CatManageApp {
         //next():a method included in scanner,used to read the next string
         System.out.println("Age");
         int age = sc.nextInt();
+        while (age < 0) {
+            System.out.println("Age cannot be negative, please enter again:");
+            age = sc.nextInt();
+        }
         //nextInt():a method included in scanner,used to read the next integer
         //next() and nextInt()is different
         System.out.println("Breeds");
