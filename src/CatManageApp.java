@@ -16,7 +16,7 @@ public class CatManageApp {
         //"Scanner": a input scanning class provided by java
         //"sc":parameter name
         //"new":crate an object
-        //"Systen.in":represent for input
+        //"System.in":represent for input
        int select = 0;
         while (true) {
             System.out.println("---------------00------------------------00-----------------------");
