@@ -99,6 +99,7 @@ public class CatManageApp {
         Cat a = new Cat(id,name,age,breeds,price,description,1);
         //combine the object
         //Cat:variable declaration
+        maxIndex++;
         cats[maxIndex] = a;
         //save information into array
         //a is a place where we store the information temporarily
