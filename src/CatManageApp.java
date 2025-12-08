@@ -253,7 +253,7 @@ public class CatManageApp {
     }
         //automatically generate numbers
         public static int createNo () {
-            if (maxIndex == 0){
+            if (maxIndex == -1){
                 return 1;
             } else {
                 //last cat's index add 1
