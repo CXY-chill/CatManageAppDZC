@@ -26,7 +26,7 @@ public class CatManageApp {
             System.out.println("---------00------------------------------------00-----------------");
             System.out.println("-------000--------------------------------------000---------------");
             System.out.println("-------000--------------------------------------000---------------");
-            System.out.println("----1Save  2Delete  3Modify  4Query  5PrintAll 6showStatistics----");
+            System.out.println("-1Save  2Delete  3Modify  4Query  5PrintAll 6ShowStatistics 0Exit-");
             System.out.println("-------000---------------------------------------00---------------");
             System.out.println("-------000-----------------00000000-------------000---------------");
             System.out.println("--------000-----------------000000-------------000----------------");
