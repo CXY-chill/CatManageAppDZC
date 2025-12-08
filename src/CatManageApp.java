@@ -100,6 +100,10 @@ public class CatManageApp {
         Scanner sc = new Scanner(System.in);
         int id = sc.nextInt();
         int index = findIndex(id);
+        if (index == -1) {
+            System.out.println("Cat not found!");
+            return;
+        }
         if(cats[index].getState() ==0){
             System.out.println("This cat is deleted.");
             return;
