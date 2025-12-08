@@ -55,6 +55,11 @@ public class CatManageApp {
                 case 6:
                     showStatistics();
                     break;
+                case 0:
+                    System.out.println("Exit system...");
+                    sc.close();
+                    System.exit(0);
+                    break;
                 default:
                     System.out.println("Your choice is wrong.Please choose again.");
             }
