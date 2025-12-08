@@ -52,6 +52,9 @@ public class CatManageApp {
                 case 5:
                     printAll();
                     break;
+                case 6:
+                    showStatistics();
+                    break;
                 default:
                     System.out.println("Your choice is wrong.Please choose again.");
             }
