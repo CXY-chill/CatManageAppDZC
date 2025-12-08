@@ -257,7 +257,7 @@ public class CatManageApp {
                 return 1;
             } else {
                 //last cat's index add 1
-                return cats[maxIndex-1].getId() +1;
+                return cats[maxIndex].getId() +1;
             }
         }
 
