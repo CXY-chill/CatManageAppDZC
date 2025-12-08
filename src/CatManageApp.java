@@ -211,6 +211,12 @@ public class CatManageApp {
                 }
             }
         }
+    private static void showStatistics() {
+        System.out.println("------------show statistics-------------");
+        int totalCats = 0;
+        int activeCats = 0;
+        int deletedCats = 0;
+        int totalValue = 0;
 
         //automatically generate numbers
         public static int createNo () {
