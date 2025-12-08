@@ -119,7 +119,7 @@ public class CatManageApp {
         int id = sc.nextInt();
         int index = findIndex(id);
         if(cats[index].getState() == 0){
-            System.out.println("This cat is modified.");
+            System.out.println("This cat is deleted.");
             return;
         }
         printCat(index);
