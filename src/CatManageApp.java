@@ -104,7 +104,7 @@ public class CatManageApp {
         //save information into array
         //a is a place where we store the information temporarily
         System.out.println("Add a cat succesfully!");
-        System.out.println("This cat's ID is " + maxIndex+".");
+        System.out.println("This cat's ID is " + id +".");
     }
 
     //delete a cat
