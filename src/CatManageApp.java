@@ -95,7 +95,8 @@ public class CatManageApp {
             price = sc.nextInt();
         }
         System.out.println("Description");
-        String description = sc.next();
+        sc.nextLine();
+        String description = sc.nextLine();
         Cat a = new Cat(id,name,age,breeds,price,description,1);
         //combine the object
         //Cat:variable declaration
